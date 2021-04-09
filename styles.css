@@ -1,0 +1,1031 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background-color: #fff;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+            /*NAVIGATION BAR*/
+
+#navbar
+{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    -webkit-box-shadow: inset 1px -15px 20px -17px rgba(0,0,0,0.25); 
+    box-shadow: inset 1px -15px 20px -17px rgba(0,0,0,0.25);
+}
+
+#navbar-menu
+{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    #navbar-menu
+    {
+        width: 100%;
+    }
+}
+
+#navbar-menu a 
+{
+    color: #000;
+}
+
+#navbar-menu a i
+{
+    color: #000;
+}
+
+#logo1
+{
+    width: 20%;
+    min-width: 100px;
+    color: #000; 
+    font-size: 3.6em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #logo1
+    {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+#menu
+{
+    width: 50%;
+    min-width: 500px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+@media (max-width: 768px) {
+    #menu
+    {
+        display: none;
+    }
+}
+
+.minimenu
+{
+    font-size: 1.3em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.minimenu a
+{
+    color: #000;
+}
+
+.mhover:hover
+{
+    color: #cc0000;
+    border-bottom: 2px solid #cc0000;
+    text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
+}
+
+.contact
+{
+    width: 30%;
+    min-width: 200px;
+    font-size: 1.2em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contact
+    {
+        display: none;
+    }
+}
+
+.chover:hover
+{
+    color: #cc0000;
+    text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
+}
+
+          /* ZAMÓW ONLINE*/
+
+.container
+{
+    width: 100%;
+    min-width: 280px;
+    height: 100vh;
+    background-image: url(jpg/05910aba-c9f8-11ea-8153-2a958b7bdd2d_menu__1_.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.bcontainer button
+{
+    width: 25vw;
+    min-width: 200px;
+    height: 12vh;
+    min-height: 50px;;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    border-style: none;
+    background-color: rgba(205, 184, 0, 0.8);
+    color: #000;
+    transition: all 0.2s ease-in-out;
+    outline: 0;
+}
+
+@media (orientation: landscape) and (max-width: 1366px)
+{
+    .bcontainer button
+    {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 1024px)  
+{
+    .bcontainer button
+    {
+        font-size: 2.2em;
+        height: 8vh;
+        width: 35vw;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1024px)
+{
+    .bcontainer button
+    {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .bcontainer button
+    {
+        font-size: 1.5em;
+        height: 8vh;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 850px)
+{
+    .bcontainer button
+    {
+        height: 13vh;
+        font-size: 1.3em;
+        width: 20vw;
+    }
+}
+
+@media (max-width: 414px)
+{
+    .bcontainer button
+    {
+        font-size: 1.5em;
+        height: 8vh;
+    }
+}
+
+.bcontainer button:hover
+{
+    cursor: pointer; 
+    background-color: #ffff00;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+       /*POPUP WINDOW*/
+
+.modal 
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: #fff;
+    width: 450px;
+    max-width: 60%;
+    border-radius: 20px;
+}
+
+@media (max-width: 414px)
+{
+    .modal 
+    {
+        max-width: 90%;
+    }
+}
+
+.modal.active 
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header
+{
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-header .title 
+{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+@media (max-width: 414px)
+{
+    .modal-header .title
+    {
+        font-size: 1em;
+        font-weight: bold;
+        padding-top: 5px;
+    }
+}
+
+.modal-header .close-button 
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+@media (max-width: 414px)
+{
+    .modal-header .close-button 
+    {
+        font-size: 1.5em;
+    }
+}
+
+.modal-body 
+{
+    padding: 15px;
+}
+
+div input[type=text],
+div input[type=tel]
+{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+div input[type=submit]
+{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    border-style: none;
+    background-color: rgba(205, 184, 0, 0.8);
+    color: #000;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    div input[type=submit]
+    {
+        font-size: 1em;
+     
+    }
+}
+
+div input[type=submit]:hover
+{
+    cursor: pointer; 
+    background-color: #ffff00;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+div input:focus
+{
+    outline: none;
+}
+
+#overlay
+{
+    position: fixed;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+#overlay.active 
+{
+    opacity: 1;
+    pointer-events: all;
+}
+
+       /*LOGO TOP MIDDLE*/
+
+.section-logo
+{
+    width: 70%;
+    min-width: 280px;
+    border-bottom: 2px solid #333333;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1024px)
+{
+    .section-logo
+    {
+         width: 90%;
+    }
+}
+
+.logo2
+{
+    color: #000; 
+    font-size: 6em;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+.section-logo h1
+{
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Chango', cursive;
+    margin-top: -30px;
+}
+
+    /* BURGERS ARTICLES*/
+
+
+
+.content-container-burgers
+{
+    width: 70%;
+    min-width: 280px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .content-container-burgers
+    {
+        width: 90%;
+    }
+}
+
+.burger-classic
+{
+    width: 100%;
+    text-align: justify;
+}
+
+.burger-img img
+{
+    width: 35vw;
+    min-width: 150px;
+    float: left;
+}
+
+.burger-text
+{
+    font-size: 1.2em;
+}
+
+@media (max-width: 1024px) {
+    .burger-text
+    {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-text
+    {
+        font-size: 0.7em;
+    }
+}
+
+.burger-text h1
+{
+    padding: 15px;
+    text-align: end;
+}
+
+.burger-vege
+{
+    width: 100%;
+    text-align: justify;
+    padding-top: 50px;
+    
+}
+
+.burger-black-img img
+{
+    width: 35vw;
+    float: right;
+    min-width: 150px;
+}
+
+.burger-black-text
+{
+    font-size: 1.2em;
+}
+
+@media (max-width: 1024px) {
+    .burger-black-text
+    {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-black-text
+    {
+        font-size: 0.7em;
+    }
+}
+
+.burger-black-text h1
+{
+    padding: 15px;
+    
+}
+
+            /*LUNCH*/
+
+.lunch-container
+{
+    width: 100%;
+    min-width: 280px;
+    height: 45vh;
+    background-image: url(jpg/burgery-dwa1110x500.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.lunch
+{
+    width: 90%;
+    min-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    
+}
+
+@media (max-width: 1024px)
+{
+    .lunch-top-text
+    {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .lunch-top-text
+    {
+        font-size: 0.8em;
+    }
+}
+
+.lunch-menu-container
+{
+    width: 100%;
+    min-width: 280px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 768px) {
+    
+    .lunch-menu-container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.lunch-menu
+{
+    width: 30vw;
+    min-width: 250px;
+    min-height: 250px;
+    padding: 15px;
+    background-color: #e6e6e6;
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6); 
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 1024px) {
+    
+    .lunch-menu
+    {
+        font-size: 1em;
+        width: 35vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .lunch-menu
+    {
+        margin-bottom: 30px;
+        width: 50vw;
+        
+    }
+}
+
+@media (max-width: 368px)
+{
+    .lunch-menu
+    {
+        margin-bottom: 30px;
+        width: 50vw;
+        height: 20px;
+    }
+}
+
+.lunch-header
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    min-width: 200px;
+    min-height: 45px;
+    color: #fff;
+    letter-spacing: 2px;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    background: #000;
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.6); 
+    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 1024px)
+{
+    .lunch-header
+    {
+        font-size: 0.6em;
+        width: 30vw;
+        height: 6vh
+    }
+}
+
+@media (max-width: 768px)
+{
+    .lunch-header
+    {
+        font-size: 0.6em;
+        width: 40vw;
+    }
+}
+
+.lunch-price
+{
+    font-size: 2.2vw;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px)
+{
+    .lunch-price
+    {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .lunch-price
+    {
+        font-size: 1rem;
+    }
+}
+
+.lunch-info
+{
+    padding: 10px;
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px)
+{
+    .lunch-info
+    {
+        font-size: 0.5em;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1366px)
+{
+    .lunch-info
+    {
+        font-size: 0.5em;
+    }
+}
+
+
+@media (max-width: 768px)
+{
+    .lunch-info
+    {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 368px)
+{
+    .lunch-info
+    {
+        font-size: 0.5rem;
+    }
+}
+
+    /*MENU*/
+
+.menu-container
+{
+    width: 100%;
+    min-width: 280px;
+    height: 45vh;
+    background-image: url(jpg/burgery-trzy.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.menu-picture
+{
+    margin: 0 auto;
+    padding-top: 40px;
+    min-width: 280px;
+}
+
+.menu-picture img
+{
+    width: 35vw;
+    min-width: 350px;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 1024px)
+{
+    .menu-picture img
+    {
+        width: 80vw;
+        min-width: 200px;
+    }
+}
+
+.menu-picture img:hover
+{
+   -webkit-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    transform: scale(1.09);
+    transition: 0.2s ease-in-out;
+    -webkit-box-shadow: 0px 0px 25px 0px #000000; 
+    box-shadow: 0px 0px 25px 0px #000000;
+}
+
+    /*CONTACT*/
+
+.contact-container
+{
+    width: 100%;
+    min-width: 280px;
+    height: 45vh;
+    margin-top: 50px;
+    background-image: url(jpg/burgery%20cztery.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.content-container-contact
+{
+    width: 70%;
+    min-width: 280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px)
+{
+    .content-container-contact
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .content-container-contact
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contact-data
+{
+    width: 30%;
+    max-width: 280px;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 15px;
+    background-color: #f2f2f2;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6); 
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6);
+}
+
+@media (max-width: 1024px)
+{
+    .contact-data
+    {
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+.contact-data h1
+{
+    font-size: 1.3em;
+}
+
+.contact-data p
+{
+    margin: 10px;
+    font-size: 0.9em;
+}
+
+.contact-data a 
+{
+     color: #000;
+}
+
+.contact-map
+{
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6); 
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.6);
+    width: 60%;
+}
+
+@media (max-width: 1024px)
+{
+    .contact-map
+    {
+        width: 90%;
+    }
+}
+
+.contact-map iframe
+{
+    width: 100%;
+    height: 50vh;
+    min-height: 250px;
+    border: 0;
+    
+}
+
+@media (max-width: 1024px)
+{
+    .contact-map iframe
+    {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .contact-map iframe
+    {
+        width: 100%;
+    }
+}
+
+.contact-container-bottom
+{
+    width: 100%;
+    min-width: 280px;
+    height: 45vh;
+    background-image: url(jpg/burger%205.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+    
+}
+    /*FOOTER*/
+
+footer
+{
+    width: 100%;
+    min-width: 280px;
+    background-color: #000000;
+    height: 250px;    
+}
+
+#footer-container
+{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px)
+{
+    #footer-container
+    {
+        width: 100%;
+    }
+}
+
+#section-logo2
+{
+    min-width: 200px;
+}
+
+@media (max-width: 768px)
+{
+    #section-logo2
+    {
+        display: none;
+    }
+}
+
+.media
+{
+    height: 250px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px)
+{
+    .media
+    {
+        width: auto;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .media
+    {
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 280px)
+{
+    .media
+    {
+        min-width: 100px;
+    }
+}
+
+.ig:hover
+{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 )
+}
+
+.fb:hover
+{
+    background-color: #29487D;
+}
+
+#logo3
+{
+    color: #fff; 
+    font-size: 100px;
+    height: 100px;
+    margin-top: 20px;
+    
+}
+
+#section-logo2 h1
+{
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Chango', cursive;
+    color: #fff;
+    padding-top: 20px;
+}
+
