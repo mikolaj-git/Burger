@@ -27,7 +27,7 @@
         
       
             <nav id="navbar" >
-                <div id="navbar-menu" >
+                <div id="navbar-menu">
                     <div id="logo1"><a href="#index" class="chover"><i class="icon-fast-food"></i></a></div>
                     <div id="menu">
                         <div class="minimenu"><a href="#about-us" class="mhover">O Nas</a></div>
@@ -36,7 +36,7 @@
                         <div class="minimenu"><a href="#contact" class="mhover">Kontakt</a></div>
                         <div class="minimenu"><a href="#order" class="mhover" data-modal-target="#modal">Zamów</a></div>
                     </div>
-                    <div class="contact"><a href="tel:+697323044" class="mhover"><span >+048 697 323 043</span><i class="icon-phone"></i></a></div>
+                    <div class="contact"><a href="tel:+697323044" class="mhover"><span >+048 697 323 033</span><i class="icon-phone"></i></a></div>
                    
                 </div>
             </nav>
@@ -48,7 +48,12 @@
            
             <section class="container" id="index">
                 
-                <div class="bcontainer">
+                <div class="container-header">
+                    <span id="container-header-one">restauracja</span>
+                    <span id="container-header-two">burger</span>
+                </div>
+                
+                <div id="bcontainer">
                     <button data-modal-target="#modal">zamów online</button>
                 </div>
                     <div class="modal" id="modal">
@@ -59,7 +64,7 @@
                         <div class="modal-body">
                             <input type="text" placeholder="Adres" >
                             <input type="tel" placeholder="Telefon">
-                            <input type="text" placeholder="Zamówienie">
+                            <textarea placeholder="Wpisz zamówienie" rows="4" cols="60" maxlength="25" minlength="5"></textarea>
                             <input type="submit" value="zamawiam">
                         </div>
                   </div>
@@ -76,14 +81,14 @@
  <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ BURGERS ARTICLES @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
            
         <article>
-            <div class="content-container-burgers" >
-                <section class="burger-classic">
-                    <div class="burger-img">
+            <div id="content-container-burgers" >
+                <section id="burger-classic">
+                    <div id="burger-img">
                         <img src="jpg/burger%201.jpg" width="400px">
                     </div>
-                    <div class="burger-text">
+                    <div id="burger-text">
                         <h1>Burgery Klasyczne</h1>
-                        <p>Typowe danie typu fast food, kanapka (sandwich) z kotletem z mięsa wołowego (patty). Porcja mięsa mielonego uformowana jest tu w płaski, okrągły placek, następnie usmażona lub upieczona bez panierki na ruszcie (grillu). Gotowy kotlet bywa zwykle umieszczany między dwoma kawałkami lekko przypieczonej, poprzecznie przeciętej bułki (co pozwala go jeść trzymając w dłoni, bez pomocy sztućców), oraz ugarnirowany dodatkami takimi jak sałata, pomidor, ketchup, majonez, ogórek konserwowy. W języku polskim słowo „hamburger” oznaczać może także sam, niepanierowany kotlet z mięsa mielonego.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </section>
            
@@ -91,9 +96,9 @@
                     <div class="burger-black-img">
                         <img src="jpg/czarny-burger.jpg" width="400px">
                     </div>
-                    <div class="burger-black-text">
+                    <div id="burger-black-text">
                         <h1>Burgery Wege</h1>
-                        <p>Burgery, swój czarny kolor zawdzięczają dwóm tajemniczym składnikom – atramentowi kałamarnicy w sosie oraz węglowi bambusowemu w bułce i serze. Burgery zostały okrzyknięte w Japonii hitem, który bardzo szybko stał się popularny w Europie, jednak krajem europejskim który zadebiutował w serwowaniu czarnych kanapek jest… Polska! Czarne burgery można dostać w dwóch restauracjach w Poznaniu, na Starym Mieście i Jeżycach, a jak tłumaczy ich właściciel, wprowadzenie kanapek do menu miało być sposobem na przyciągnięcie klientów. W odróżnieniu od japońskiej wersji, polskie burgery barwioną sepią mają jedynie bułkę. Sepia jest czarnobrązowym barwnikiem otrzymywanym z woreczka czernidłowego mątwy. Właściciel tłumaczy, że zabarwienie sosu mogłoby zmienić jego smak, natomiast azjatycki charakter dania zapewnić ma dodanie do niego sezamu, surimi czy sosu z domieszką wasabi.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </section>
                 <div style="clear: both"></div>
@@ -102,16 +107,21 @@
            
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@  LUNCH CONTAINER @@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
            
-            <div class="lunch-container"></div>
+            <div id="lunch-container">
+                <div class="container-header">
+                    <span class="other-containers-header">aromat</span>
+                </div>
+            </div>
+                
             
                 <header class="section-logo" id="lunch">
                     <div class="logo2"><i class="icon-fast-food"></i></div>
                     <h1>lunch</h1>
                 </header>
                
-                <section class="lunch">
+                <section id="lunch-content">
                     
-                    <div class="lunch-top-text">
+                    <div id="lunch-top-text">
                         <p>Lunch serwowany jest od poniedziałku do piątku</p>
                         <h1>11:00 - 16:00</h1>
                         <p>Dostępne w dostawie lub z odbiorem osobistym</p>
@@ -148,44 +158,56 @@
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@  MENU CONTAINER @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
            
-        <div class="menu-container"></div>
+        <div id="menu-container">
+            <div class="container-header">
+                <span class="other-containers-header">smak</span>
+            </div>
+        </div>
            
             <header class="section-logo" id="order-menu">
                 <div class="logo2"><i class="icon-fast-food"></i></div>
                 <h1>menu</h1>
             </header>
 
-            <section class="menu-picture">
+            <section id="menu-picture">
                <center><img src="jpg/menu.jpg"></center>
             </section>
            
 
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@ CONTACT CONTAINER @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
            
-        <div class="contact-container"></div>
+        <div id="contact-container">
+            <div class="container-header">
+                <span class="other-containers-header">jakość</span>
+            </div>
+        </div>
 
             <header class="section-logo" id="contact">
                 <div class="logo2" ><i class="icon-fast-food" ></i></div>
                 <h1>Kontakt</h1>
             </header>   
             
-            <div class="content-container-contact" >
+            <div id="content-container-contact">
                 
-                <div class="contact-data"> 
+                <div id="contact-data"> 
                     <h1>Warszawa Falenica</h1>    
                     <p>04-982 Warszawa</p>    
                     <p>Ul. Ratyniecka 2</p>    
-                        <a href="tel:+697323043"><p>+048 697 323 043<i class="icon-phone"></i></p></a> 
-                        <a href="tel:+714624172"><p>+048 714 624 172<i class="icon-phone"></i></p></a> 
+                        <a href="tel:+697323043"><p>+048 697 323 033<i class="icon-phone"></i></p></a> 
+                        <a href="tel:+714624172"><p>+048 700 123 345<i class="icon-phone"></i></p></a> 
                 </div>
 
-                <div class="contact-map">   
+                <div id="contact-map">   
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.931318013081!2d21.20940625447701!3d52.15375875508766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47192b4d0d4e148d%3A0x9abf4a9b00730f0b!2sRatyniecka%202%2C%2005-410%20Warszawa!5e0!3m2!1spl!2spl!4v1616468659753!5m2!1spl!2spl"  allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 
             </div>
             
-         <div class="contact-container-bottom"></div>
+         <div id="contact-container-bottom">
+            <div class="container-header">
+                <span class="other-containers-header">sledź nas</span>
+            </div>
+         </div>
             
         </main>
         
@@ -213,6 +235,7 @@
                 </a>
             
             </div>
+            <div id="footer-copyrights">Copyright &copy; 2021 Restauracja Burger. Wszelkie prawa zastrzeżone. (Projekt niekomercyjny, stworzony w celach szkoleniowych)  </div>
             
         </footer>
                 
