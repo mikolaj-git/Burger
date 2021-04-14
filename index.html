@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"><!--dodanie czcionek-->
     <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="fonts/fontello-49278c58/css/fontello.css" type="text/css">
     <link rel="stylesheet" href="fonts/fontello-aefae667/css/fontello.css" type="text/css">
     <link rel="stylesheet" href="fonts/fontello-857034bc/css/fontello.css" type="text/css">
     <link rel="stylesheet" href="fonts/fontello-69b4d22b/css/fontello.css" type="text/css">
@@ -26,19 +27,50 @@
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@  MENU @@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
         
       
-            <nav id="navbar" >
+            <nav id="main-navbar" >
                 <div id="navbar-menu">
-                    <div id="logo1"><a href="#index" class="chover"><i class="icon-fast-food"></i></a></div>
+                    <div id="logo1"><a href="#index"><i class="icon-fast-food"></i></a></div>
                     <div id="menu">
-                        <div class="minimenu"><a href="#about-us" class="mhover">O Nas</a></div>
-                        <div class="minimenu"><a href="#lunch" class="mhover">Lunch</a></div>
-                        <div class="minimenu"><a href="#order-menu" class="mhover">Menu</a></div>
-                        <div class="minimenu"><a href="#contact" class="mhover">Kontakt</a></div>
-                        <div class="minimenu"><a href="#order" class="mhover" data-modal-target="#modal">Zamów</a></div>
+                        <div><a href="#about-us" class="nav-link">O nas</a></div>
+                        <div><a href="#lunch" class="nav-link">Lunch</a></div>
+                        <div><a href="#order-menu" class="nav-link">Menu</a></div>
+                        <div><a href="#contact" class="nav-link">Kontakt</a></div>
+                        <div class="minimenu"><a href="#order" class="nav-link" data-modal-target="#modal">Zamów</a></div>
                     </div>
-                    <div class="contact"><a href="tel:+697323044" class="mhover"><span >+048 697 323 033</span><i class="icon-phone"></i></a></div>
-                   
-                </div>
+                    <div class="contact"><a href="tel:+697323044"><span>+048 697 323 033</span><i class="icon-phone"></i></a></div>
+                    
+                    <div class="hamburger-menu-container">
+                        <div class="hamburger-menu">
+                            <div class="line line-1"></div>
+                            <div class="line line-2"></div>
+                            <div class="line line-3"></div>
+                        </div>
+                        
+                        <nav class="navbar">
+                            <ul class="nav-list">
+                                <li class="nav-items">
+                                    <a href="#about-us" class="nav-link">O nas</a>
+                                </li>
+                                <li class="nav-items">
+                                    <a href="#lunch" class="nav-link">Lunch</a>
+                                </li>
+                                <li class="nav-items">
+                                    <a href="#order-menu" class="nav-link">Menu</a>
+                                </li>
+                                <li class="nav-items">
+                                    <a href="#contact" class="nav-link">Kontakt</a>
+                                </li>
+                                <li class="nav-items">
+                                    <a href="#order" class="nav-link" data-modal-target="#modal">Zamów</a>
+                                </li>
+                                <li class="nav-items">
+                                    <a href="tel:+697323044" class="nav-link">Zadzwoń<i class="icon-phone"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                      </div>  
+                    </div>
+                
             </nav>
      
        
@@ -64,7 +96,7 @@
                         <div class="modal-body">
                             <input type="text" placeholder="Adres" >
                             <input type="tel" placeholder="Telefon">
-                            <textarea placeholder="Wpisz zamówienie" rows="4" cols="60" maxlength="25" minlength="5"></textarea>
+                            <textarea placeholder="Wpisz zamówienie" rows="4" cols="60" maxlength="300" minlength="5"></textarea>
                             <input type="submit" value="zamawiam">
                         </div>
                   </div>
@@ -183,7 +215,7 @@
         </div>
 
             <header class="section-logo" id="contact">
-                <div class="logo2" ><i class="icon-fast-food" ></i></div>
+                <div class="logo2" ><i class="icon-fast-food"></i></div>
                 <h1>Kontakt</h1>
             </header>   
             
@@ -205,7 +237,7 @@
             
          <div id="contact-container-bottom">
             <div class="container-header">
-                <span class="other-containers-header">sledź nas</span>
+                <span class="other-containers-header">śledź nas</span>
             </div>
          </div>
             

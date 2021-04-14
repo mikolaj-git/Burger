@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
 html {
@@ -19,9 +21,7 @@ a
     text-decoration: none;
 }
 
-            /*NAVIGATION BAR*/
-
-#navbar
+#main-navbar
 {
     width: 100%;
     position: fixed;
@@ -46,6 +46,7 @@ a
     #navbar-menu
     {
         width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -62,7 +63,7 @@ a
 #logo1
 {
     width: 20%;
-    min-width: 100px;
+    min-width: 150px;
     color: #000; 
     font-size: 3.6em;
     text-align: center;
@@ -73,7 +74,6 @@ a
 @media (max-width: 768px) {
     #logo1
     {
-        width: 100%;
         justify-content: space-between;
     }
 }
@@ -85,7 +85,8 @@ a
     color: #000;
     display: flex;
     align-items: center;
-    justify-content: space-around; 
+    justify-content: space-around;
+    font-size: 1.2em;
 }
 
 @media (max-width: 768px) {
@@ -93,6 +94,123 @@ a
     {
         display: none;
     }
+}
+
+.contact
+{
+    width: 20%;
+    min-width: 220px;
+    font-size: 1.2em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contact
+    {
+        display: none;
+    }
+}
+
+@media (min-width: 769px)
+{
+    .hamburger-menu-container
+    {
+        display: none;
+    }
+}
+
+.navbar
+{
+    width: 200px;
+    background-color: #fff;
+    position: fixed;
+    top: 85px;
+    right: -200px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    transition: right .8s cubic-bezier(1, 0, 0, 1);
+}
+    
+.change
+{
+    right: 0px;
+}
+
+.hamburger-menu
+{
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 10px;
+}
+
+.line
+{
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.8s;
+}
+
+.change .line-1
+{
+    transform: rotateZ(-45deg) translate(-8px , 6px);
+}
+
+.change .line-2
+{
+    opacity: 0;
+}
+
+.change .line-3
+{
+    transform: rotateZ(45deg) translate(-8px , -6px);
+}
+
+.nav-list
+{
+    text-align: right;
+}
+
+.nav-items
+{
+    margin: 20px;
+}
+
+.nav-link
+{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::after 
+{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin:inherit;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after
+{
+    transform: scaleX(1);
+}
 }
 
 .minimenu
@@ -115,30 +233,11 @@ a
     text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
 }
 
-.contact
-{
-    width: 30%;
-    min-width: 200px;
-    font-size: 1.2em;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .contact
-    {
-        display: none;
-    }
-}
-
 .chover:hover
 {
     color: #cc0000;
     text-shadow: 0px 0px 12px rgba(150, 150, 150, 1);
 }
-
-          /* ZAMÓW ONLINE*/
 
 .container
 {
@@ -221,7 +320,6 @@ a
     height: 2px;
     margin-left: 10px;
     vertical-align: middle;
-    
 }
 
 @media (max-width: 768px)
@@ -304,6 +402,7 @@ a
     #bcontainer button
     {
         height: 10vh;
+        font-size: 1.5em;
     }
 }
 
@@ -312,7 +411,16 @@ a
     #bcontainer button
     {
         font-size: 1.5em;
-        height: 8vh;
+        height: 5vh;
+    }
+}
+
+@media (max-width: 668px) 
+{
+    #bcontainer button
+    {
+        font-size: 1.5em;
+        height: 7vh;
     }
 }
 
@@ -344,8 +452,6 @@ a
     -ms-transform: scale(1.15);
     transform: scale(1.15);
 }
-
-       /*POPUP WINDOW*/
 
 .modal 
 {
@@ -505,8 +611,6 @@ div input:focus
     pointer-events: all;
 }
 
-       /*LOGO TOP MIDDLE*/
-
 .section-logo
 {
     width: 70%;
@@ -520,21 +624,22 @@ div input:focus
 {
     .section-logo
     {
-         width: 90%;
+         width: 100%;
     }
 }
 
 .logo2
 {
     color: #000; 
-    font-size: 6em;
+    font-size: 5em;
     text-align: center;
     margin: 0 auto; 
+    
 }
 
 .section-logo h1
 {
-    font-size: 2em;
+    font-size: 1.4em;
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -544,18 +649,14 @@ div input:focus
     margin-top: -30px;
 }
 
-    /* BURGERS ARTICLES*/
-
-
-
 #content-container-burgers
 {
     width: 70%;
     min-width: 280px;
     margin: 0 auto;
     padding-top: 20px;
+    padding: 5px;
 }
-
 
 @media (max-width: 768px) {
     #content-container-burgers
@@ -607,7 +708,6 @@ div input:focus
     width: 100%;
     text-align: justify;
     padding-top: 50px;
-    
 }
 
 .burger-black-img img
@@ -641,8 +741,6 @@ div input:focus
     padding: 15px;
 }
 
-            /*LUNCH*/
-
 #lunch-container
 {
     width: 100%;
@@ -660,7 +758,6 @@ div input:focus
     align-items: center;
     justify-content: center;
 }
-
 
 #lunch-content
 {
@@ -832,7 +929,6 @@ div input:focus
     }
 }
 
-
 @media (max-width: 768px)
 {
     .lunch-info
@@ -848,8 +944,6 @@ div input:focus
         font-size: 0.5rem;
     }
 }
-
-    /*MENU*/
 
 #menu-container
 {
@@ -902,8 +996,6 @@ div input:focus
     -webkit-box-shadow: 0px 0px 25px 0px #000000; 
     box-shadow: 0px 0px 25px 0px #000000;
 }
-
-    /*CONTACT*/
 
 #contact-container
 {
@@ -1045,7 +1137,6 @@ div input:focus
     justify-content: center;
     
 }
-    /*FOOTER*/
 
 footer
 {
@@ -1099,7 +1190,6 @@ footer
     .media
     {
         width: auto;
-        
     }
 }
 

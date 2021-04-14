@@ -34,3 +34,12 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
+
+const menuIcon = document.querySelector(".hamburger-menu");
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector(".navbar");
+
+menuIcon.addEventListener("click", () => {
+hamburgerMenu.classList.toggle("change");
+navbar.classList.toggle("change");
+});
